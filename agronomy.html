@@ -678,27 +678,7 @@ document.querySelectorAll(".level-nav .course-level-button[data-level]").forEach
 });
 </script>
 
-<script>
-document.getElementById("ictPdfUpload").addEventListener("change", function(){
-  const status = document.getElementById("uploadStatus");
-  const file = this.files[0];
 
-  if(!file){
-    status.textContent = "No PDF selected.";
-    return;
-  }
-
-  const isPdf = file.type === "application/pdf" || file.name.toLowerCase().endsWith(".pdf");
-
-  if(!isPdf){
-    this.value = "";
-    status.textContent = "Please select a PDF file.";
-    return;
-  }
-
-  status.textContent = "Selected: " + file.name + " (ready for upload)";
-});
-</script>
 
 
 <script>
